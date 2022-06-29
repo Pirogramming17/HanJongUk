@@ -219,3 +219,7 @@ nav li a {
   color: #00ab33;
   font-size: 16px;
 }
+
+nav ul.list_nav NM_FAVORITE_LIST {
+  color: #000;
+}
