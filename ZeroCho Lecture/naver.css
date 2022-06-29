@@ -2,6 +2,20 @@
   box-sizing: border-box;
 }
 
+html body {
+  margin: 0;
+  padding: 0;
+}
+#fixed {
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 50px;
+}
 /* 선택자(selector) */
 .blind {
   position: absolute;
@@ -25,6 +39,8 @@
   height: 52px;
   background: url(./sp_main.png) -152px -355px no-repeat;
   vertical-align: middle;
+  position: relative;
+  top: 1px;
   /* background-image: url(./sp_main.png);
   background-position: -4px -10px;
   background-repeat: no-repeat; */
@@ -50,28 +66,39 @@
   height: 50px;
   border: 2px solid #03cf5d;
   vertical-align: middle;
+  position: relative;
 }
 
 #header-search fieldset input {
   border: none;
   padding: 0;
   outline: none;
+  width: 444px;
+  height: 24px;
+  vertical-align: top;
 }
 
 #header-search fieldset button {
-  width: 56px;
-  height: 56px;
+  width: 50px;
+  height: 50px;
   border: none;
   padding: 0;
   background: #03cf5d;
+  position: absolute;
+  right: -2px;
+  top: -2px;
 }
 
 #search-image {
   background-image: url(./sp_main.png);
-  background-position: -832px 8px;
+  background-position: -834px 4px;
   background-repeat: no-repeat;
-  width: 56px;
-  height: 56px;
+  width: 50px;
+  height: 50px;
   margin: 0;
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%, -50%); */
   display: inline-block;
 }
