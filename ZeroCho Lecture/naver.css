@@ -233,8 +233,26 @@ nav li:first-child span:first-child {
 
 #search-ranking {
   float: right;
+  right: 0;
+  width: 198px;
+  height: 20px;
 }
-
+#search-ranking:hover ul {
+  display: inline-block;
+}
+#search-ranking ul {
+  display: none;
+  position: absolute;
+  top: -15px;
+  right: 0;
+  list-style: none;
+  padding: 17px;
+  margin: 0;
+  width: 332px;
+  height: 334px;
+  border: 1px solid #aaa;
+  background: white;
+}
 #rank-number {
   margin-top: -9px;
   color: #00ab33;
