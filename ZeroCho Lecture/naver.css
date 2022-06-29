@@ -2,10 +2,13 @@
   box-sizing: border-box;
 }
 
-html body {
+html,
+body {
   margin: 0;
   padding: 0;
+  font-family: Dotum, "돋움", Helvetica, "Apple SD Gothic Neo", sans-serif;
 }
+
 #fixed {
   position: fixed;
   top: 50px;
@@ -25,13 +28,21 @@ html body {
   width: 1px;
   height: 1px;
 }
+.relative {
+  position: relative;
+}
 .center-align {
   margin: 0 auto;
   width: 1080px;
+  border-top: 1px solid #f1f3f6;
+  border-bottom: 1px solid #d1d8e4;
 }
-
+header {
+  height: 170px;
+}
 #header-top {
   float: right;
+  margin-top: 8px;
 }
 
 #header-top span {
@@ -43,6 +54,7 @@ html body {
 
 #header-search {
   clear: both;
+  padding-top: 20px;
 }
 #header-search a {
   text-decoration: none;
@@ -51,10 +63,12 @@ html body {
   display: inline-block;
   width: 222px;
   height: 52px;
-  background: url(./sp_main.png) -152px -355px no-repeat;
+  background: url(./sp_main.png) 2px -160px no-repeat;
+  background-size: 457px 434px;
   vertical-align: middle;
   position: relative;
-  top: 1px;
+  top: -5px;
+  left: 1px;
   /* background-image: url(./sp_main.png);
   background-position: -4px -10px;
   background-repeat: no-repeat; */
@@ -69,7 +83,7 @@ html body {
 }
 
 #header-search fieldset {
-  margin-left: 20px;
+  margin-left: 18px;
   /* padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 10px;
@@ -105,10 +119,11 @@ html body {
 
 #search-image {
   background-image: url(./sp_main.png);
-  background-position: -834px 4px;
+  background-size: 457px 434px;
+  background-position: -420px 0px;
   background-repeat: no-repeat;
-  width: 50px;
-  height: 50px;
+  width: 22px;
+  height: 22px;
   margin: 0;
   /* position: absolute;
   top: 50%;
@@ -147,8 +162,9 @@ html body {
   color: #03cf5d;
 }
 nav ul {
+  display: inline-block;
   margin: 0;
-  padding: 0;
+  padding: 16px 0 0 4px;
   list-style: none;
 }
 nav li {
@@ -157,4 +173,22 @@ nav li {
 
 nav li a {
   text-decoration: none;
+}
+
+.nav-divider {
+  display: inline-block;
+  margin: 18px 16px 0;
+  width: 1px;
+  height: 14px;
+  background: #ebeef3;
+}
+
+#search-ranking {
+  float: right;
+}
+
+#rank-number {
+  margin-top: -9px;
+  color: #00ab33;
+  font-size: 16px;
 }
