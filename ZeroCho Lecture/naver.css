@@ -9,6 +9,19 @@ body {
   font-family: Dotum, "돋움", Helvetica, "Apple SD Gothic Neo", sans-serif;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
 #fixed {
   position: fixed;
   top: 50px;
@@ -58,7 +71,7 @@ main {
 
 #header-search {
   clear: both;
-  padding-top: 20px;
+  padding-top: 45px;
 }
 #header-search a {
   text-decoration: none;
@@ -224,23 +237,31 @@ nav li a {
   font-size: 16px;
 }
 
+#rank-title {
+  letter-spacing: -1px;
+  font-size: 14px;
+}
+
 nav ul.list_nav NM_FAVORITE_LIST {
   color: #000;
 }
 
 #main-ad {
-  display: inline-block;
   width: 740px;
   height: 120px;
+  float: left;
   background: #555;
+  margin-right: 8px;
+  margin-bottom: 8px;
 }
 
 #main-login {
-  display: inline-block;
   width: 332px;
   height: 120px;
   vertical-align: top;
   background-color: white;
+  margin-bottom: 8px;
+  float: left;
 }
 
 #main-ytn {
@@ -248,6 +269,8 @@ nav ul.list_nav NM_FAVORITE_LIST {
   width: 740px;
   height: 46px;
   background-color: white;
+  margin-right: 8px;
+  margin-bottom: 8px;
 }
 
 #main-newstand {
@@ -255,6 +278,8 @@ nav ul.list_nav NM_FAVORITE_LIST {
   width: 740px;
   height: 246px;
   background-color: white;
+  margin-right: 8px;
+  margin-bottom: 8px;
 }
 
 #main-weather {
@@ -262,6 +287,7 @@ nav ul.list_nav NM_FAVORITE_LIST {
   width: 332px;
   height: 142px;
   background-color: white;
+  margin-bottom: 8px;
 }
 
 #main-second-ad {
@@ -269,38 +295,89 @@ nav ul.list_nav NM_FAVORITE_LIST {
   width: 332px;
   height: 150px;
   background: #555;
+  margin-bottom: 8px;
 }
 
 #main-category {
-  display: inline-block;
+  float: left;
   width: 740px;
   height: 837px;
   background-color: white;
+  margin-bottom: 8px;
+  margin-right: 8px;
 }
 
 #main-shopping {
-  display: inline-block;
+  float: left;
   width: 740px;
   height: 837px;
   background-color: white;
+  margin-right: 8px;
 }
 
 #main-event {
-  display: inline-block;
+  float: left;
   width: 740px;
   height: 130px;
   background-color: white;
   vertical-align: top;
+  margin-right: 8px;
 }
 
 #main-third-ad {
-  display: inline-block;
+  float: left;
   width: 332px;
   height: 130px;
   background-color: #555;
 }
 
+#main-third-block,
+#main-fourth-block {
+  display: inline-block;
+  width: 100%;
+}
+
 #main-centered {
-  padding: 8px 10px 0;
+  padding: 8px 10px;
   width: 1100px;
+}
+
+#main-second-block .inline-block:first-child {
+  width: 740px;
+}
+
+#main-second-block .inline-block:last-child {
+  width: 332px;
+  vertical-align: top;
+}
+
+#main-ytn h3,
+#main-ytn ol {
+  display: inline-block;
+}
+
+#main-newstand h3 {
+  height: 45px;
+  border-bottom: 1px solid #ebeef3;
+}
+
+#main-newstand ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#main-newstand li {
+  float: left;
+  width: 123px;
+  height: 67px;
+  border-right: 1px solid #f1f3f6;
+  border-bottom: 1px solid #f1f3f6;
+  text-align: center;
+}
+
+#main-newstand li img {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
