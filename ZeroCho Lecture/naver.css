@@ -44,7 +44,11 @@ header {
   float: right;
   margin-top: 8px;
 }
-
+main {
+  background-color: #f2f4f7;
+  display: inline-block;
+  width: 100%;
+}
 #header-top span {
   color: #888;
   letter-spacing: -1px;
