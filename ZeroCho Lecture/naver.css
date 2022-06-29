@@ -47,8 +47,6 @@ h6 {
 .center-align {
   margin: 0 auto;
   width: 1080px;
-  border-top: 1px solid #f1f3f6;
-  border-bottom: 1px solid #d1d8e4;
 }
 header {
   height: 170px;
@@ -219,6 +217,12 @@ nav li a {
   text-decoration: none;
 }
 
+nav li:first-child span:first-child {
+  width: 25px;
+  background-position: 0 -285px;
+  margin-left: 0;
+}
+
 .nav-divider {
   display: inline-block;
   margin: 18px 16px 0;
@@ -245,7 +249,11 @@ nav li a {
 nav ul.list_nav NM_FAVORITE_LIST {
   color: #000;
 }
-
+main {
+  background-color: #f2f4f7;
+  display: inline-block;
+  width: 100%;
+}
 #main-ad {
   width: 740px;
   height: 120px;
@@ -269,7 +277,6 @@ nav ul.list_nav NM_FAVORITE_LIST {
   width: 740px;
   height: 46px;
   background-color: white;
-  margin-right: 8px;
   margin-bottom: 8px;
 }
 
@@ -279,15 +286,20 @@ nav ul.list_nav NM_FAVORITE_LIST {
   height: 246px;
   background-color: white;
   margin-right: 8px;
+  vertical-align: top;
+}
+#main-second-block {
+  display: inline-block;
+  vertical-align: top;
   margin-bottom: 8px;
 }
-
 #main-weather {
   display: inline-block;
   width: 332px;
   height: 142px;
   background-color: white;
   margin-bottom: 8px;
+  vertical-align: top;
 }
 
 #main-second-ad {
@@ -295,13 +307,13 @@ nav ul.list_nav NM_FAVORITE_LIST {
   width: 332px;
   height: 150px;
   background: #555;
-  margin-bottom: 8px;
+  vertical-align: top;
 }
 
 #main-category {
   float: left;
   width: 740px;
-  height: 837px;
+  height: 943px;
   background-color: white;
   margin-bottom: 8px;
   margin-right: 8px;
@@ -309,10 +321,11 @@ nav ul.list_nav NM_FAVORITE_LIST {
 
 #main-shopping {
   float: left;
-  width: 740px;
-  height: 837px;
+  width: 354px;
+  height: 943px;
   background-color: white;
   margin-right: 8px;
+  vertical-align: top;
 }
 
 #main-event {
@@ -326,15 +339,22 @@ nav ul.list_nav NM_FAVORITE_LIST {
 
 #main-third-ad {
   float: left;
-  width: 332px;
+  width: 354px;
   height: 130px;
   background-color: #555;
+}
+
+#main-first-block {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
 }
 
 #main-third-block,
 #main-fourth-block {
   display: inline-block;
   width: 100%;
+  vertical-align: top;
 }
 
 #main-centered {
@@ -342,11 +362,12 @@ nav ul.list_nav NM_FAVORITE_LIST {
   width: 1100px;
 }
 
-#main-second-block .inline-block:first-child {
+#main-second-block .float-left:first-child {
   width: 740px;
+  margin-right: 8px;
 }
 
-#main-second-block .inline-block:last-child {
+#main-second-block .float-left:last-child {
   width: 332px;
   vertical-align: top;
 }
@@ -380,4 +401,13 @@ nav ul.list_nav NM_FAVORITE_LIST {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.float-left {
+  float: left;
+}
+
+#main-shopping iframe {
+  width: 100%;
+  height: 100%;
 }
