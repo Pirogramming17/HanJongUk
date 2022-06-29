@@ -30,6 +30,20 @@ html body {
   width: 1080px;
 }
 
+#header-top {
+  float: right;
+}
+
+#header-top span {
+  color: #888;
+  letter-spacing: -1px;
+  font-size: 11px;
+  line-height: 22px;
+}
+
+#header-search {
+  clear: both;
+}
 #header-search a {
   text-decoration: none;
 }
@@ -122,7 +136,7 @@ html body {
   background-size: 457px 434px;
 }
 .shoplive {
-  margin: -5px 0;
+  margin: -5gpx 0;
   width: 54px;
   height: 20px;
   background: url(./sp_main.png) -202px -300px no-repeat;
