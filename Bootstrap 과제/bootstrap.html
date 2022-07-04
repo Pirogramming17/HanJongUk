@@ -10,26 +10,41 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
+    />
   </head>
   <body>
     <header>
-      <nav id="navbar-example2" class="navbar navbar-dark bg-dark px-3">
-        <a class="navbar-brand" href="#">Pirogramming</a>
-        <a class="navbar-brand" href="#">Ukjong</a>
-        <ul class="nav nav-pills">
-          <li class="nav-item">
-            <a class="nav-link" href="#scrollspyHeading1">Intro</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#scrollspyHeading2">Highlights</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#scrollspyHeading2">Gallery</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#scrollspyHeading2">Contact</a>
-          </li>
-          <li class="nav-item">
+      <nav
+        id="navbar-example2"
+        class="navbar fixed-top navbar-expand-lg bg-dark"
+      >
+        <div class="container">
+          <a class="navbar-brand text-white" href="#mainpage">Pirogramming</a>
+          <a class="navbar-brand text-info" href="">Ukjong</a>
+          <div class="d-flex justify-content-between">
+            <ul class="nav nav-pills">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#mainpage"
+                  >Intro</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-secondary" href="#highlights"
+                  >Highlights</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-secondary" href="#gallary">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-secondary" href="#contact"
+                  >Contact</a
+                >
+              </li>
+            </ul>
             <button
               class="btn btn-outline-info"
               data-bs-toggle="modal"
@@ -37,99 +52,133 @@
             >
               About
             </button>
-          </li>
-        </ul>
+          </div>
+        </div>
       </nav>
     </header>
 
     <main>
-      <div class="d-flex flex-column align-items-center pt-5 mt-5">
-        <span>Pirogramming</span>
-        <span>Cheer up</span>
-        <div>
-          <button class="btn btn-primary">Get Started</button>
-        </div>
-      </div>
-
-      <div>
+      <section id="mainpage">
         <div
-          class="d-flex flex-column align-items-center py-5 mt-5 bg-secondary bg-gradient"
+          class="container vh-100 d-flex flex-column align-items-center justify-content-center text-center"
         >
-          <p class="fs-1 fw-bold text-danger">Built On the Bootstrap Grid</p>
-
-          <p class="text-wrap text-white text-center" style="width: 35rem">
-            Bootstrap's responsive grid comes in 4 sizes or "breakpoints":
-            tiny(xs), small(sm), medium(md) and large(lr4 g). These 4 grid sizes
-            enables you create responsive layouts that behave accordingly on
-            different sizes.
-          </p>
-
-          <button class="btn btn-light">Learn more</button>
+        <div class="col-lg-4">
+          <h2 class="fw-bold">Pirogramming17</h2>
+          <span class="fw-bold">Cheer up</span>
+          <div class="w-100 border-bottom border-dark boder-2 mb-2 mt-3"></div>
+          <a class="btn btn-primary" href="#start">Get Started</a>
         </div>
-      </div>
+        </div>
+      </section>
+      <section id="start">
+        <div>
+          <div
+            class="vh-100 d-flex flex-column justify-content-center align-items-center bg-secondary bg-gradient"
+          >
+            <p class="fs-1 fw-bold text-danger">Built On the Bootstrap Grid</p>
 
-      <div class="bg-dark">
-        <div></div>
+            <p class="text-wrap text-white text-center" style="width: 35rem">
+              Bootstrap's responsive grid comes in 4 sizes or "breakpoints":
+              tiny(xs), small(sm), medium(md) and large(lr4 g). These 4 grid
+              sizes enables you create responsive layouts that behave
+              accordingly on different sizes.
+            </p>
 
-        <div class="d-flex justify-content-around py-3">
-          <div>
-            <img
-              src="https://picsum.photos/seed/1/300/300"
-              class="img-fluid"
-              alt=""
-            />
-          </div>
-          <div>
-            <img
-              src="https://picsum.photos/seed/2/300/300"
-              class="img-fluid"
-              alt=""
-            />
-          </div>
-          <div>
-            <img
-              src="https://picsum.photos/seed/3/300/300"
-              class="img-fluid"
-              alt=""
-            />
+            <a class="btn btn-light" href="#highlights">Learn more</a>
           </div>
         </div>
-        <div class="d-flex justify-content-around py-3">
+      </section>
+
+      <section id="highlights" class = "bg-dark">
+        <div class="text-center container">
           <div>
-            <img
-              src="https://picsum.photos/seed/4/300/300"
-              class="img-fluid"
-              alt=""
-            />
+            <h3 class="text-primary pt-4 pb-4">Flexible Layouts</h3>
           </div>
-          <div>
-            <img
-              src="https://picsum.photos/seed/5/300/300"
-              class="img-fluid"
-              alt=""
-            />
-          </div>
-          <div>
-            <img
-              src="https://picsum.photos/seed/6/300/300"
-              class="img-fluid"
-              alt=""
-            />
+          <hr class="pt-1 text-secondary bg-secondary">
+          <div class="row">
+            <div class="text-white col-lg-4">
+              <i class="bi bi-display" style="font-size: 8rem;"></i>
+              <h4>Resposive</h4>
+              <p>Your site looks good everywhere</p>
+            </div>
+            <div class="text-white col-lg-4"> 
+              <i class="bi bi-alarm" style="font-size: 8rem;"></i>
+              <h4>Get up</h4>
+              <p>Easy to theme and customize</p>
+            </div>
+            <div class="text-white col-lg-4"> 
+              <i class="bi bi-star" style="font-size: 8rem;"></i>
+              <h4>Consistent</h4>
+              <p>A mature, well-tested, stable cobebase</p>
+            </div>
           </div>
         </div>
-      </div>
+        </div>
+      </section>
 
+      <section id="gallary" class="bg-dark">
+        <div class="vh-50 container text-center">
+          <div class="row">
+            <div class="col-lg-4 col-md-6 pb-4">
+              <img
+                src="https://picsum.photos/seed/1/300/300"
+                class="img-fluid"
+                alt=""
+              />
+            </div>
+            <div class="col-lg-4 col-md-6 pb-4">
+              <img
+                src="https://picsum.photos/seed/2/300/300"
+                class="img-fluid"
+                alt=""
+              />
+            </div>
+            <div class="col-lg-4 col-md-6 pb-4">
+              <img
+                src="https://picsum.photos/seed/3/300/300"
+                class="img-fluid"
+                alt=""
+              />
+            </div>
+            <div class="col-lg-4 col-md-6 pb-4">
+              <img
+                src="https://picsum.photos/seed/4/300/300"
+                class="img-fluid"
+                alt=""
+              />
+            </div>
+            <div class="col-lg-4 col-md-6 pb-4">
+              <img
+                src="https://picsum.photos/seed/5/300/300"
+                class="img-fluid"
+                alt=""
+              />
+            </div>
+            <div class="col-lg-4 col-md-6 pb-4">
+              <img
+                src="https://picsum.photos/seed/6/300/300"
+                class="img-fluid"
+                alt=""
+              />
+            </div>
+          </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
       <div class="bg-secondary py-5">
         <div class="d-flex flex-column align-items-center">
           <div class="fs-3 text-primary"><p>Get in Touch</p></div>
 
           <div class="d-flex w-100 justify-content-center">
-            <input class="w-25" type="text" placeholder="Name" />
-            <input class="w-25" type="text" placeholder="Email" />
-            <input class="w-25" type="text" placeholder="Phone" />
+            <input class="w-25 px-2" type="text" placeholder="Name" />
+            <input class="w-25 px-2" type="text" placeholder="Email" />
+            <input class="w-25 px-2" type="text" placeholder="Phone" />
           </div>
           <div class="w-75 py-4">
-            <input class="w-100" type="text" placeholder="Your message here." />
+            <textarea class="w-100" name="" id="" cols="30" rows="10" placeholder="Your message here."></textarea>
+            <!-- <input class="w-100" type="text" placeholder="Your message here." /> -->
           </div>
           <button
             class="btn btn-primary w-25"
@@ -140,6 +189,7 @@
           </button>
         </div>
       </div>
+    </section>
     </main>
 
     <footer class="bg-dark">
