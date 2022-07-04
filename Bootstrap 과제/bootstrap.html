@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header>
+      <nav id="navbar-example2" class="navbar navbar-dark bg-dark px-3">
+        <a class="navbar-brand" href="#">Pirogramming</a>
+        <a class="navbar-brand" href="#">Ukjong</a>
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading1">Intro</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading2">Highlights</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading2">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#scrollspyHeading2">Contact</a>
+          </li>
+          <li class="nav-item">
+            <button
+              class="btn btn-outline-info"
+              data-bs-toggle="modal"
+              data-bs-target="#AboutModal"
+            >
+              About
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="d-flex flex-column align-items-center pt-5 mt-5">
+        <span>Pirogramming</span>
+        <span>Cheer up</span>
+        <div>
+          <button class="btn btn-primary">Get Started</button>
+        </div>
+      </div>
+
+      <div>
+        <div
+          class="d-flex flex-column align-items-center py-5 mt-5 bg-secondary bg-gradient"
+        >
+          <p class="fs-1 fw-bold text-danger">Built On the Bootstrap Grid</p>
+
+          <p class="text-wrap text-white text-center" style="width: 35rem">
+            Bootstrap's responsive grid comes in 4 sizes or "breakpoints":
+            tiny(xs), small(sm), medium(md) and large(lr4 g). These 4 grid sizes
+            enables you create responsive layouts that behave accordingly on
+            different sizes.
+          </p>
+
+          <button class="btn btn-light">Learn more</button>
+        </div>
+      </div>
+
+      <div class="bg-dark">
+        <div></div>
+
+        <div class="d-flex justify-content-around py-3">
+          <div>
+            <img
+              src="https://picsum.photos/seed/1/300/300"
+              class="img-fluid"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="https://picsum.photos/seed/2/300/300"
+              class="img-fluid"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="https://picsum.photos/seed/3/300/300"
+              class="img-fluid"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="d-flex justify-content-around py-3">
+          <div>
+            <img
+              src="https://picsum.photos/seed/4/300/300"
+              class="img-fluid"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="https://picsum.photos/seed/5/300/300"
+              class="img-fluid"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="https://picsum.photos/seed/6/300/300"
+              class="img-fluid"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-secondary py-5">
+        <div class="d-flex flex-column align-items-center">
+          <div class="fs-3 text-primary"><p>Get in Touch</p></div>
+
+          <div class="d-flex w-100 justify-content-center">
+            <input class="w-25" type="text" placeholder="Name" />
+            <input class="w-25" type="text" placeholder="Email" />
+            <input class="w-25" type="text" placeholder="Phone" />
+          </div>
+          <div class="w-75 py-4">
+            <input class="w-100" type="text" placeholder="Your message here." />
+          </div>
+          <button
+            class="btn btn-primary w-25"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            Send
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-dark">
+      <div class="d-flex justify-content-center">
+        <div class="w-25">
+          <p class="text-info">Information</p>
+          <p class="text-white">Product</p>
+          <p class="text-white">Services</p>
+          <p class="text-white">Benefits</p>
+          <p class="text-white">Developer</p>
+        </div>
+        <div class="w-25">
+          <p class="text-info">About</p>
+          <p class="text-white">Conta Us</p>
+          <p class="text-white">Delivery Information</p>
+          <p class="text-white">Privacy Policy</p>
+          <p class="text-white">Terms & Conditions</p>
+        </div>
+        <div class="w-25 d-flex flex-column">
+          <p class="text-info">Stay Posted</p>
+          <input type="text" name="" id="" placeholder="Tell us your email" />
+          <button
+            class="btn btn-primary w-75"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            Subscribe for updates
+          </button>
+        </div>
+      </div>
+      <div class="text-light">Bootstrap @ 2022 Pirogramming17</div>
+    </footer>
+    <div
+      class="modal fade"
+      id="AboutModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content bg-secondary">
+          <div class="modal-header">
+            <h5 class="modal-title text-white" id="exampleModalLabel">
+              피로그래밍 17기
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-white">
+            <p>파이팅!</p>
+            <p>
+              모두들 아르샤 하시느라 수고 많으셨습니다!! 힘들더라도 끝나면
+              남는게 많을 겁니다 남은 세션들도 힘내서 열심히 해봐요!
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Download
+            </button>
+            <button type="button" class="btn btn-primary">Ok</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Nice-Job!</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>You clicked the button, but it doesn't actually go anywhere</p>
+            <p class="text-primary">Learn more at Bootstrap</p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Download
+            </button>
+            <button type="button" class="btn btn-primary">Ok</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
