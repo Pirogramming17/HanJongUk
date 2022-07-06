@@ -47,7 +47,7 @@
           <div class="container">
             <div>
               <div class="d-flex justify-content-around bg-light">
-                <input class="form-check-input" type="radio" />
+                <input id="all" type="checkbox" />
                 <span>구간기록</span>
                 <div id="delete">
                   <i class="bi bi-trash-fill"></i>
@@ -66,11 +66,11 @@
       let s = 0;
       let ms = 0;
       let timer;
-      let num = 0;
 
       const startButton = document.querySelector("#btn_start");
       const stopButton = document.querySelector("#btn_stop");
       const resetButton = document.querySelector("#btn_reset");
+      const allButton = document.querySelector("#all");
       const delButton = document.querySelector("#delete");
       const recordList = document.querySelector("#record_list");
       const second = document.querySelector("#s");
@@ -97,8 +97,7 @@
         newRecord.classList.add("d-flex");
         newRecord.classList.add("justify-content-around");
         radio.classList.add("form-check-input");
-        radio.setAttribute("id", num++);
-        radio.setAttribute("type", "radio");
+        radio.setAttribute("type", "checkbox");
 
         record.textContent = `${s}:${ms}`;
 
@@ -116,11 +115,17 @@
       });
 
       delButton.addEventListener("click", () => {
-        for (i = 0; i < recordList.children.length; i++) {
-          if (document.getElementById(i).checked) {
-            recordList.removeChild(recordList.childNodes[i]);
+        const delcheck = document.querySelectorAll(".form-check-input");
+        delcheck.forEach((checkbox) => {
+          if (checkbox.checked) {
+            checkbox.parentElement.remove();
           }
-        }
+        });
+      });
+
+      allButton.addEventListener("click", () => {
+        const allcheck = document.querySelectorAll(".form-check-input");
+        allcheck.forEach((checkbox) => (checkbox.checked = true));
       });
     </script>
   </body>
