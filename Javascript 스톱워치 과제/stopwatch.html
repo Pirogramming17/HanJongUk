@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css"
+    />
+    <title>Stopwatch</title>
+  </head>
+  <body>
+    <main class="bg-light">
+      <div
+        class="container vw-50 vh-100 d-flex justify-content-center align-items-center bg-white border-start border-end border-1 border-dark"
+      >
+        <div class="row">
+          <div class="d-flex justify-content-center">
+            <i class="bi bi-stopwatch-fill p-1"></i>
+            <h3 class="fw-bold">피로그래밍 스톱워치</h3>
+          </div>
+          <div class="bg-secondary rounded mb-4">
+            <div class="container d-flex flex-column align-items-center">
+              <div class="d-flex bg-white mt-4">
+                <h4 id="s">00</h4>
+                <h4>:</h4>
+                <h4 id="ms">00</h4>
+              </div>
+              <div class="mt-3 mb-4">
+                <button id="btn_start" class="btn bg-light rounded">
+                  start
+                </button>
+                <button id="btn_stop" class="btn bg-light rounded">stop</button>
+                <button id="btn_reset" class="btn bg-light rounded">
+                  reset
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div>
+              <div class="d-flex justify-content-around bg-light">
+                <input class="form-check-input" type="radio" />
+                <span>구간기록</span>
+                <div id="delete">
+                  <i class="bi bi-trash-fill"></i>
+                </div>
+              </div>
+              <div class="row">
+                <ul id="record_list"></ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      let time = 0;
+      let s = 0;
+      let ms = 0;
+      let timer;
+      let num = 0;
+
+      const startButton = document.querySelector("#btn_start");
+      const stopButton = document.querySelector("#btn_stop");
+      const resetButton = document.querySelector("#btn_reset");
+      const delButton = document.querySelector("#delete");
+      const recordList = document.querySelector("#record_list");
+      const second = document.querySelector("#s");
+      const milisecond = document.querySelector("#ms");
+
+      startButton.addEventListener("click", () => {
+        timer = setInterval(() => {
+          time++;
+
+          s = String(parseInt(time / 100)).padStart(2, "0");
+          ms = String(time % 100).padStart(2, "0");
+          second.textContent = `${s}`;
+          milisecond.textContent = `${ms}`;
+        }, 1);
+      });
+
+      stopButton.addEventListener("click", () => {
+        clearInterval(timer);
+        const newRecord = document.createElement("li");
+        const label = document.createElement("label");
+        const radio = document.createElement("input");
+        const record = document.createElement("p");
+
+        newRecord.classList.add("d-flex");
+        newRecord.classList.add("justify-content-around");
+        radio.classList.add("form-check-input");
+        radio.setAttribute("id", num++);
+        radio.setAttribute("type", "radio");
+
+        record.textContent = `${s}:${ms}`;
+
+        newRecord.appendChild(radio);
+        newRecord.appendChild(record);
+        newRecord.appendChild(label);
+        recordList.appendChild(newRecord);
+      });
+
+      resetButton.addEventListener("click", () => {
+        num = 0;
+        clearInterval(timer);
+        second.textContent = `00`;
+        milisecond.textContent = `00`;
+      });
+
+      delButton.addEventListener("click", () => {
+        for (i = 0; i < recordList.children.length; i++) {
+          if (document.getElementById(i).checked) {
+            recordList.removeChild(recordList.childNodes[i]);
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
