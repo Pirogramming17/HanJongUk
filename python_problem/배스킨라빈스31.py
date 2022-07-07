@@ -44,8 +44,8 @@ while True:
     if playerA.playerturn() != True or playerB.playerturn() != True:
         break
 
-# if playerA.result:
-#     print("playerB win!")
+if playerA.result:
+    print("playerB win!")
 
-# else:
-#     print("playerA win!")
+else:
+    print("playerA win!")
