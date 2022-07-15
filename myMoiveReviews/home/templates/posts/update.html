@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>게시글 올리기</title>
+  </head>
+  <body>
+    <form action="{% url 'posts:update' movie.id %}" method="post">
+      {% csrf_token %}
+      <h2>
+        <input
+          type="text"
+          name="title"
+          placeholder="제목"
+          value="{{movie.title}}"
+        />
+      </h2>
+      <p>
+        <input
+          type="text"
+          name="director"
+          placeholder="감독"
+          value="{{movie.director}}"
+        />
+        <input
+          type="text"
+          name="main"
+          placeholder="주연"
+          value="{{movie.main}}"
+        />
+        <input
+          type="number"
+          name="years"
+          placeholder="개봉 년도"
+          value="{{movie.years}}"
+        />
+      </p>
+      <p>
+        <input
+          type="text"
+          name="genre"
+          placeholder="장르"
+          value="{{movie.genre}}"
+        />
+        <input
+          type="number"
+          step="0.01"
+          name="starRating"
+          placeholder="별점"
+          value="{{movie.starRating}}"
+        />
+        <input
+          type="number"
+          name="runningTime"
+          placeholder="러닝타임"
+          value="{{movie.runningTime}}"
+        />
+      </p>
+      <textarea name="reviews" id="" cols="50" rows="10">
+{{movie.reviews}}</textarea
+      >
+
+      <div>
+        <a href="{% url 'posts:home' %}"
+          ><input type="submit" value="저장"
+        /></a>
+      </div>
+    </form>
+  </body>
+</html>

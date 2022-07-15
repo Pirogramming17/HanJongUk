@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>영화 리뷰</title>
+  </head>
+  <body>
+    <article>
+      <h2>제목 : {{ movie.title }}</h2>
+      <p>감독: {{ movie.director }} 주연: {{movie.main}}</p>
+      <p>개봉 년도: {{movie.year}} 장르: {{movie.genre}}</p>
+      <p>별점: {{movie.starRating}} 러닝타임: {{movie.runningTime}}분</p>
+      <div>{{movie.reviews}}</div>
+    </article>
+    <div><a href="{% url 'posts:home' %}">my Movie reviews</a></div>
+    <div><a href="{% url 'posts:update' movie.id %}">수정</a></div>
+    <form action="{% url 'posts:delete' movie.id %}" method="post">
+      {% csrf_token %}
+      <button>삭제</button>
+    </form>
+  </body>
+</html>
