@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>아이디어 상세</title>
+  </head>
+  <body>
+    <article>
+      {% if idea.image %}
+      <p>
+        <img src="{{ idea.image.url }}" alt="" />
+      </p>
+      {% endif %}
+      <h2>{{ idea.title }}</h2>
+      <p>1) 아이디어 관심도</p>
+      <p>{{idea.interest}}</p>
+      <p>2) 예상 개발 툴</p>
+      <p>{{devt_name}}</p>
+      <div>{{idea.content}}</div>
+    </article>
+
+    <div><a href="{% url 'sites:ideaupdate' idea.id %}">수정</a></div>
+    <div>
+      <form action="{% url 'sites:ideadelete' idea.id %}" method="post">
+        {% csrf_token %}
+        <button>삭제</button>
+      </form>
+    </div>
+    <div><a href="/">목록</a></div>
+  </body>
+</html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>아이디어 등록</title>
+    <title>개발툴 수정</title>
   </head>
   <body>
     <nav>
@@ -15,37 +15,25 @@
       <a href="{% url 'sites:devtlist' %}">개별툴 관리</a>
     </nav>
     <form
-      action="{% url 'sites:ideacreate' %}"
+      action="{% url 'sites:devtupdate' devtool.id%}"
       method="post"
       enctype="multipart/form-data"
     >
       {% csrf_token %}
       <h2>
-        아이디어 명:
-        <input type="text" name="title" />
+        이름:
+        <input type="text" name="name" value="{{devtool.name}}" />
       </h2>
       <p>
-        Image:
-        <input type="file" name="image" />
+        종류:
+        <input type="text" name="kind" value="{{devtool.kind}}" />
       </p>
       <p>
-        아이디어 설명:
-        <textarea name="content" id="" cols="30" rows="10"></textarea>
+        개발툴 설명:
+        <textarea name="content" id="" cols="30" rows="10">
+{{devtool.content}}</textarea
+        >
       </p>
-      <p>
-        아이디어 관심도:
-        <input type="number" name="interest" />
-      </p>
-      <p>
-        예상 개발툴:
-        <select name="devtool" id="">
-          <option value="">-------</option>
-          {% for devtool in devtools %}
-          <option value="{{devtool.name}}">{{devtool.name}}</option></p>
-          {% endfor %}
-        </select>
-      </p>
-
       <div>
         <input type="submit" value="SUBMIT" />
       </div>

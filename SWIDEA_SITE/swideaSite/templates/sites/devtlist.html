@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/home.css' %}" />
-    <title>아이디어 사이트</title>
+    <title>개발툴 관리</title>
   </head>
   <body>
     <nav>
@@ -19,22 +19,17 @@
     <main>
       <div>
         <div>
-          <span>Idea List</span>
-          <p>나의 아이디어를 잊지 말고 기록해보세요</p>
+          <span>DevTool List</span>
+          <p>
+            개발툴 목록 페이지입니다. 자신이 사용가능한 개발들의 목록을 확인해
+            보세요.
+          </p>
         </div>
-        <form action="{% url 'sites:main' %}">
-          <select name="sort" onchange="this.form.submit()">
-            <option selected="selected" value="none">------</option>
-            <option value="name">이름순</option>
-            <option value="recent">최신순</option>
-            <option value="postly">등록순</option>
-          </select>
-        </form>
-        {% for idea in ideas %}
+        {% for devtool in devtools %}
         <div>
-          <a href="{% url 'sites:ideadetail' idea.id%}">{{idea.title}}</a>
-          <span>예상 개발 툴 : {{idea.devtool.name}}</span>
-          <span>아이디어 관심도 : {{idea.interest}}</span>
+          <a href="{% url 'sites:devtdetail' devtool.id%}">{{devtool.name}}</a>
+          <span>{{devtool.kind}}</span>
+          <span>{{devtool.content}}</span>
         </div>
         {% endfor %}
       </div>

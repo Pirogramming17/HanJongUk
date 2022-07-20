@@ -14,3 +14,5 @@ class Idea(models.Model):
     content = models.TextField(verbose_name="아이디어 설명")
     interest = models.IntegerField(default = 0, verbose_name="아이디어 관심도")
     devtool = models.ForeignKey(Devtool, on_delete=models.CASCADE, related_name="tool_name")
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)

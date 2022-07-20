@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>개발툴 등록</title>
+  </head>
+  <body>
+    <nav>
+      <a href="">My SW Idea Manage</a>
+      <a href="{% url 'sites:ideacreate' %}">아이디어 등록</a>
+      <a href="{% url 'sites:main' %}">아이디어 관리</a>
+      <a href="{% url 'sites:devtcreate' %}">개별툴 등록</a>
+      <a href="{% url 'sites:devtlist' %}">개별툴 관리</a>
+    </nav>
+    <form
+      action="{% url 'sites:devtcreate' %}"
+      method="post"
+      enctype="multipart/form-data"
+    >
+      {% csrf_token %}
+      <p>
+        이름:
+        <input type="text" name="name" />
+      </p>
+      <p>
+        종류:
+        <input type="text" name="kind" />
+      </p>
+      <p>
+        개발툴 설명:
+        <textarea name="content" id="" cols="30" rows="10"></textarea>
+      </p>
+      <div>
+        <input type="submit" value="SUBMIT" />
+      </div>
+    </form>
+  </body>
+</html>
